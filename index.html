@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="brand">Tesla</div>
+        <ul class="nav-links">
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#library">Library</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+      
+    <button class="hamburger-menu">☰</button>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="filters">
+        <select>
+          <option>Timeframe: All-time</option>
+          <option>Last 7 Days</option>
+          <option>This Month</option>
+        </select>
+        <select>
+          <option>People: All</option>
+          <option>Managers</option>
+          <option>Trainers</option>
+        </select>
+        <select>
+          <option>Topic: All</option>
+          <option>Food Safety</option>
+          <option>Compliance</option>
+        </select>
+      </div>
+
+      <div class="cards">
+        
+            <!-- Metrics Cards -->
+            <div class="card">Active Users: <p></p></div>
+            <div class="card">Questions Answered: <p></p></div>
+            <div class="card">Avg Session Length: <p></p></div>
+            <div class="card">Knowledge Gain: <p></p></div>
+          </div>
+          
+          <!-- Activity Chart -->
+          <div class="chart-container">
+            <canvas id="activityChart"></canvas>
+          
+          
+
+      </div>
+      <div class="topics">
+        <h3>Weakest Topics</h3>
+        <div id="weakest-topics"></div>
+      
+        <h3>Strongest Topics</h3>
+        <div id="strongest-topics"></div>
+      </div>
+      <div class="leaderboards">
+        <h3>User Leaderboard</h3>
+        <div id="user-leaderboard"></div>
+      
+        <h3>Group Leaderboard</h3>
+        <div id="group-leaderboard"></div>
+      </div>
+
+      
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="activityChart"></canvas>
+
+</body>
+</html>
